@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Dynamic Buttons</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1 id="myH1"></h1>
-    <h2 id="myH2"></h2>
-    <h3 id="myH3"></h3>
-    <p id="myP"></p>
-    <button id="myBtn">Click Me</button>
+    <h1>Dynamic Button Generator</h1>
+
+    <label for="btnCount">Number of buttons:</label>
+    <input type="number" id="btnCount" min="1" value="1">
+
+    <div id="buttonContainer"></div>
+
     <script src="js/index.js"></script>
 </body>
 

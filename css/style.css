@@ -1,12 +1,15 @@
-    body {
-        font-family: Arial, sans-serif;
-        font-size: 2em;
-        background-color: #7c4949;
-        margin: 0;
-        padding: 0;
-    }
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
 
-    .highlight {
-        color: red;
-        font-weight: bold;
-    }
+input {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#buttonContainer button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+}

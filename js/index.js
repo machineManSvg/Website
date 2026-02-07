@@ -1,23 +1,22 @@
-/*
-console.log("Hello, World!");
-console.log("This is a simple Node.js application.");
+const input = document.getElementById("btnCount");
+const container = document.getElementById("buttonContainer");
 
-window.alert("Alert!!!");
-window.alert("Alert 2!!!");
-*/
-document.getElementById("myH1").textContent = "Hello, World!";
-document.getElementById("myP").textContent = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-document.getElementById("myBtn").addEventListener("click", function() {
-    alert("Button clicked!");
+// Function to create buttons dynamically
+function renderButtons(count) {
+    container.innerHTML = ""; // Clear previous buttons
+    for (let i = 1; i <= count; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = `Button ${i}`;
+        btn.addEventListener("click", () => alert(`You clicked Button ${i}`));
+        container.appendChild(btn);
+    }
+}
+
+// Initial render
+renderButtons(parseInt(input.value));
+
+// Update buttons whenever input changes
+input.addEventListener("input", () => {
+    const count = parseInt(input.value) || 0;
+    renderButtons(count);
 });
-
-const x = 10;
-const y = 20;
-const sum = x + y;
-
-document.getElementById("myH1").textContent = `The sum of ${x} and ${y} is: ${sum}`;
-document.getElementById("myH2").textContent = "The sum of " + x + " and " + y + " is: " + sum;
-let myH3 = document.getElementById("myH3");
-myH3.textContent = "Reference to H3 element";
-myH3.style.color = "blue";
-myH3.style.fontSize = "2em";
