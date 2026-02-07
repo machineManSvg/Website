@@ -1,9 +1,7 @@
-/* Make the body take the full height and use flex layout */
 html,
 body {
     height: 100%;
     margin: 0;
-    /* remove default spacing */
     font-family: Arial, sans-serif;
 }
 
@@ -12,26 +10,36 @@ body {
     flex-direction: column;
 }
 
-/* Main grows to fill space, pushing footer down */
 main {
     flex: 1;
     padding: 20px;
 }
 
-/* Styling for input */
 input {
     width: 60px;
     margin-right: 10px;
 }
 
-/* Styling buttons */
-#buttonContainer button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
+#imageContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Footer styling */
+#imageContainer img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#imageContainer img:hover {
+    transform: scale(1.05);
+}
+
 footer {
     background-color: #333;
     color: white;
