@@ -1,15 +1,40 @@
+/* Make the body take the full height and use flex layout */
+html,
 body {
+    height: 100%;
+    margin: 0;
+    /* remove default spacing */
     font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main grows to fill space, pushing footer down */
+main {
+    flex: 1;
     padding: 20px;
 }
 
+/* Styling for input */
 input {
     width: 60px;
     margin-right: 10px;
 }
 
+/* Styling buttons */
 #buttonContainer button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 1em;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
