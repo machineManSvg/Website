@@ -16,7 +16,7 @@ function renderImages(count) {
     container.innerHTML = "";
     for (let i = 0; i < count && i < images.length; i++) {
         const img = document.createElement("img");
-        img.src = `/assets/pictures/${images[i]}`;
+        img.src = `/static/assets/pictures/${images[i]}`;
         img.alt = images[i];
         img.addEventListener("click", () => alert(`You clicked ${images[i]}`));
         container.appendChild(img);

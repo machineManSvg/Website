@@ -3,7 +3,7 @@ import os
 
 app = Flask(__name__)
 
-IMAGE_FOLDER = "assets/pictures"
+IMAGE_FOLDER = "static/assets/pictures"
 
 @app.route("/")
 def home():
